@@ -1,4 +1,4 @@
-# FunLoc_FFA
+# FuncLoc_FFA
 This is a psychopy version of FFA_localizer, part of the Functional localizer for fMRI scan, this python version is more stable to run during the fMRI scan
 
 All parameters remain unchanged
