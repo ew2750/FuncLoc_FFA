@@ -78,7 +78,7 @@ def run(a,win, out_dir, subj_id, image_run, block_order):
         mask = GratingStim(win, tex=None, mask='circle', size=(0.00587,0.01), color='white')
         mask.draw()
         win.flip()
-        while global_clock.getTime()- run_start< 5.0+b*20:
+        while global_clock.getTime()- run_start< 15+b*30:
             continue
         # core.wait(15.0) #wait for 15 seconds
 
