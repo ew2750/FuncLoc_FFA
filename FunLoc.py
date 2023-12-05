@@ -143,9 +143,11 @@ if __name__ == "__main__":
         subj_id = str(sys.argv[1]) #input the assigned subject numebr in the terminal line
         number_of_runs = int(sys.argv[2])
         out_dir = f"output/{subj_id}/"
-        if not os.path.exists (out_dir):
+        if os.path.exists (out_dir):
+            print('ERROR: Existing subject output')
+            exit()
+        else:
             os.makedirs(out_dir)
-        
         win = visual.Window(size=[1920,1080], fullscr=False, color="gray", screen=1) # for Mac,use useRetina=True
 
     except Exception as e:
