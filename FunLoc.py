@@ -89,7 +89,7 @@ def run(a,win, out_dir, subj_id, image_run, block_order):
             ResponseTime = None
             keys = ()
             img = visual.ImageStim(win, image = image_run[b][c], pos = (0, 0.1))
-            img.size = (0.5,1.14)
+            img.size = (0.75,1.71) # original size is 0.5, 1.14
             img.draw()
             mask.draw()
             win.flip()
