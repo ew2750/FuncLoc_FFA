@@ -3,7 +3,7 @@ This is a psychopy coding version of FFA_localizer, part of the Functional local
 
 All parameters remain unchanged. 
 
-In the command line, sys.argv[1]=subj_id, sys.argv[2]=how many runs
+In the command line, sys.argv[1]=subj_id, sys.argv[2]=**how many runs**
 Example:
 > python FunLoc_FFA.py 001 2
 
