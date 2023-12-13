@@ -31,7 +31,8 @@ def create_img_list(block_order):
     
     # %create stim_order, with exactly 6 incidental 1-backs
     targets = 0
-    while targets != 6:
+    #while targets != 6:
+    while targets != 10: #make it 10 incidental 1-backs
         stim_order = [list(np.random.choice(range(1, 41), size=20, replace=True)) for _ in block_order]
         targets_temp = [sum(np.diff(order) == 0) for order in stim_order]
         targets = sum(targets_temp)
