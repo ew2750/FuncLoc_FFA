@@ -7,7 +7,7 @@ All parameters remain unchanged.
 
 ## Command Line Input
 
-<ins>**python FunLoc.py {subj_id} {# runs} **</ins>
+<ins>python FunLoc.py {subj_id} {# runs}</ins>
 
 In the command line:
 - sys.argv[1]=subj_id 
