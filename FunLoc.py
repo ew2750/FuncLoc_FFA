@@ -148,7 +148,7 @@ if __name__ == "__main__":
             exit()
         else:
             os.makedirs(out_dir)
-        win = visual.Window(size=[1920,1080], fullscr=False, color="gray", screen=1) # for Mac,use useRetina=True
+        win = visual.Window(size=[1920,1080], fullscr=True, color="gray", screen=1) # for Mac,use useRetina=True
 
     except Exception as e:
         print('Error in retrieving trial selections for %s. Please ensure that trial selections exist and the subjID key is correct' % (subj_id))
