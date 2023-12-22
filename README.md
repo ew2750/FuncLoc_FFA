@@ -7,7 +7,7 @@ All parameters remain unchanged.
 
 ## Command Line Input
 
-<ins>conda activate psychopy </ins> (if you are on scanning laptop)
+<ins>conda activate psychopy</ins> (if you are on scanning laptop)
 
 <ins>python FunLoc.py {subj_id} {# runs}</ins>
 
