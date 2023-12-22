@@ -168,6 +168,16 @@ if __name__ == "__main__":
         image_list = create_img_list(block_order)
 
         run(a,win, out_dir, subj_id, image_list, block_order)
+        if a == 2:
+            goodbye  = visual.TextStim(win, text = "Good Job! \n\nWe are just doing one final scan for 3 minutes, please remain still!", 
+							height = 0.07, pos = (0, 0), color = "black")
+        else: 
+            goodbye  = visual.TextStim(win, text = f"Good Job! We have a second run for this task\n\nYou may take a quick rest - let us know when you are ready to continue", 
+							height = 0.07, pos = (0, 0), color = "black")
+            goodbye.draw()
+            win.flip()
+            event.waitKeys(keyList = ['8']) 
+            event.clearEvents()
 
 
 
