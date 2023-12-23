@@ -169,43 +169,12 @@ if __name__ == "__main__":
 
         run(a,win, out_dir, subj_id, image_list, block_order)
         if a == 2:
-            goodbye  = visual.TextStim(win, text = "Good Job! \n\nWe are just doing one final scan for 3 minutes, please remain still!", 
+            goodbye  = visual.TextStim(win, text = "Good job! \n\nWe are just doing one quick scan for 1.5 minutes before the next task. \n\nPlease remain still!", 
 							height = 0.07, pos = (0, 0), color = "black")
         else: 
-            goodbye  = visual.TextStim(win, text = f"Good Job! We have a second run for this task\n\nYou may take a quick rest - let us know when you are ready to continue", 
+            goodbye  = visual.TextStim(win, text = f"Good job! We have a second run for this task.\n\nYou may take a quick rest - let us know when you are ready to continue.", 
 							height = 0.07, pos = (0, 0), color = "black")
             goodbye.draw()
             win.flip()
             event.waitKeys(keyList = ['8']) 
             event.clearEvents()
-
-
-
-
-        # # preload stim for next presentation
-        # stimTimer = clock.StaticPeriod(screenHz=60)
-        # stimTimer.start(0.5)  # start a period of 0.2s
-        # if it+1 < 161:
-        #     next_image = visual.ImageStim(win, image = img_path + trial_order.face[it + 1], pos = (0, 0.1))
-        # stimTimer.complete()
-            
-            # ResponseTime = None
-            # keys = ()
-            # # wait here untile the end_time is reached
-            # while global_clock.getTime() < row.end_time:
-                
-            #     # if a key_press has been already made, continue (ignore the later response after initial response)
-            #     if len(keys) > 0:
-            #         continue
-            #     # else, if no key_press has been made yet, check for possible response 
-            #     else:
-            #         keys = event.getKeys(keyList= ['1'])
-            #         if '1' in keys:  # if 1 is pressed
-            #             keyPress = '1'
-            #             ResponseTime = global_clock.getTime() - startTime
-            #             if 1 == row.correct :
-            #                 correct = '1'
-            #             else :
-            #                 correct = '0'
-  
-    #write output of logging for this run
