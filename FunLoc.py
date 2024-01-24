@@ -57,6 +57,9 @@ def create_img_list(block_order):
 
 def run(a,win, out_dir, subj_id, image_run, block_order):
 
+    # display instructions
+    text = visual.TextStim(win, text = "You will be looking at a series of images of houses and faces. \n\nPress any button if you see the same image twice in a row. \n\nPlease remember to always stay as still as possible!",)
+
     # wait for fMRI scanner 
     text = visual.TextStim(win, text = 'waiting for scanner', height = 0.05, pos = (0, -0.35), color = "black")
     text.draw()
