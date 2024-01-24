@@ -172,7 +172,7 @@ if __name__ == "__main__":
             goodbye  = visual.TextStim(win, text = "Good job! \n\nWe are just doing one quick scan for 1.5 minutes before the next task. \n\nPlease remain still!", 
 							height = 0.07, pos = (0, 0), color = "black")
         else: 
-            goodbye  = visual.TextStim(win, text = f"Good job! We have a second run for this task.\n\nYou may take a quick rest - let us know when you are ready to continue.", 
+            goodbye  = visual.TextStim(win, text = f"Good job! We have a second run for this task.\n\nYou may take a quick rest - let us know when you are ready to continue. \n\Please remember to always stay as still as possible! \n\nLet us know when you are ready to begin.", 
 							height = 0.07, pos = (0, 0), color = "black")
             goodbye.draw()
             win.flip()
