@@ -8,6 +8,8 @@ import sys
 import os
 import numpy as np
 
+event_keys = ['1', '2', '3', '4']
+
 
 def create_img_list(block_order):
     
@@ -57,6 +59,13 @@ def create_img_list(block_order):
 
 def run(a,win, out_dir, subj_id, image_run, block_order):
 
+    # display instructions
+    text = visual.TextStim(win, text = "You will be looking at a series of images of houses and faces. \n\nPress any button if you see the same image twice in a row. \n\nPlease remember to always stay as still as possible!", height = 0.1, pos = (0, -0.35), color = "black")
+    text.draw()
+    win.flip()
+    event.waitKeys(keyList = ['y'])
+    event.clearEvents()
+
     # wait for fMRI scanner 
     text = visual.TextStim(win, text = 'waiting for scanner', height = 0.05, pos = (0, -0.35), color = "black")
     text.draw()
@@ -101,8 +110,8 @@ def run(a,win, out_dir, subj_id, image_run, block_order):
                     continue
 				# else, if no key_press has been made yet, check for possible response 
                 else:
-                    keys = event.getKeys(keyList= ['1'])
-                    if '1' in keys:  # if 1 is pressed
+                    keys = event.getKeys(keyList= event_keys)
+                    if keys in event_keys:  # if 1 is pressed
                         keyPress = '1'
                         ResponseTime = global_clock.getTime() - startTime
                          
@@ -114,8 +123,8 @@ def run(a,win, out_dir, subj_id, image_run, block_order):
                 if len(keys) > 0:
                     continue
                 else:
-                    keys = event.getKeys(keyList= ['1'])
-                    if '1' in keys:  # if 1 is pressed
+                    keys = event.getKeys(keyList= event_keys)
+                    if keys in event_keys:  # if 1 is pressed
                         keyPress = '1'
                         ResponseTime = global_clock.getTime() - startTime
             trial_dur = global_clock.getTime()- startTime
