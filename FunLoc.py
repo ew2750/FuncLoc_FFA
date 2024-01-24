@@ -60,7 +60,8 @@ def create_img_list(block_order):
 def run(a,win, out_dir, subj_id, image_run, block_order):
 
     # display instructions
-    text = visual.TextStim(win, text = "You will be looking at a series of images of houses and faces. \n\nPress any button if you see the same image twice in a row. \n\nPlease remember to always stay as still as possible!", height = 0.1, pos = (0, -0.35), color = "black")
+    text = visual.TextStim(win, text = "You will be looking at a series of images of houses and faces. \n\nPress any button if you see the same image twice in a row. \n\nPlease remember to always stay as still as possible!", 
+                           height = 0.07, pos = (0, 0), color = "black")
     text.draw()
     win.flip()
     event.waitKeys(keyList = ['y'])
@@ -181,7 +182,7 @@ if __name__ == "__main__":
             goodbye  = visual.TextStim(win, text = "Good job! \n\nWe are just doing one quick scan for 1.5 minutes before the next task. \n\nPlease remain still!", 
 							height = 0.07, pos = (0, 0), color = "black")
         else: 
-            goodbye  = visual.TextStim(win, text = f"Good job! We have a second run for this task.\n\nYou may take a quick rest - let us know when you are ready to continue. \n\Please remember to always stay as still as possible! \n\nLet us know when you are ready to begin.", 
+            goodbye  = visual.TextStim(win, text = f"Good job! We have a second run for this task.\n\nYou may take a quick rest - let us know when you are ready to continue. \n\nPlease remember to always stay as still as possible! \n\nLet us know when you are ready to begin.", 
 							height = 0.07, pos = (0, 0), color = "black")
             goodbye.draw()
             win.flip()
