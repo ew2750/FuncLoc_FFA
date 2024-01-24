@@ -112,9 +112,11 @@ def run(a,win, out_dir, subj_id, image_run, block_order):
 				# else, if no key_press has been made yet, check for possible response 
                 else:
                     keys = event.getKeys(keyList= event_keys)
-                    if keys in event_keys:  # if 1 is pressed
-                        keyPress = '1'
+                    if keys:
                         ResponseTime = global_clock.getTime() - startTime
+                        keyPress = '1'
+                        
+
                          
             img_dur=global_clock.getTime()- startTime
 
@@ -125,7 +127,7 @@ def run(a,win, out_dir, subj_id, image_run, block_order):
                     continue
                 else:
                     keys = event.getKeys(keyList= event_keys)
-                    if keys in event_keys:  # if 1 is pressed
+                    if keys:  # if 1 is pressed
                         keyPress = '1'
                         ResponseTime = global_clock.getTime() - startTime
             trial_dur = global_clock.getTime()- startTime
@@ -159,7 +161,7 @@ if __name__ == "__main__":
             exit()
         else:
             os.makedirs(out_dir)
-        win = visual.Window(size=[1920,1080], fullscr=True, color="gray", screen=1) # for Mac,use useRetina=True
+        win = visual.Window(size=[1920,1080], fullscr=False, color="gray", screen=1) # for Mac,use useRetina=True
 
     except Exception as e:
         print('Error in retrieving trial selections for %s. Please ensure that trial selections exist and the subjID key is correct' % (subj_id))
