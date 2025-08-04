@@ -154,14 +154,15 @@ def run(a,win, out_dir, subj_id, image_run, block_order):
 if __name__ == "__main__":
     try: 
         subj_id = str(sys.argv[1]) #input the assigned subject numebr in the terminal line
-        number_of_runs = int(sys.argv[2])
+        number_of_runs = int(sys.argv[2]) # number of runs - 2 for us
         out_dir = f"output/{subj_id}/"
         if os.path.exists (out_dir):
             print('ERROR: Existing subject output')
             exit()
         else:
             os.makedirs(out_dir)
-        win = visual.Window(size=[1920,1080], fullscr=False, color="gray", screen=1) # for Mac,use useRetina=True
+        win = visual.Window(size=[1920,1080], fullscr=True, color="gray", screen=1) # for Mac,use useRetina=True
+        # win = visual.Window(size=[1920,1080], fullscr=False, color="gray", screen=1) # for Mac,use useRetina=True
 
     except Exception as e:
         print('Error in retrieving trial selections for %s. Please ensure that trial selections exist and the subjID key is correct' % (subj_id))
@@ -180,7 +181,7 @@ if __name__ == "__main__":
         image_list = create_img_list(block_order)
 
         run(a,win, out_dir, subj_id, image_list, block_order)
-        if a == 2:
+        if a == 1:
             goodbye  = visual.TextStim(win, text = "Good job! \n\nWe are just doing one quick scan for 1.5 minutes before the next task. \n\nPlease remain still!", 
 							height = 0.07, pos = (0, 0), color = "black")
         else: 
